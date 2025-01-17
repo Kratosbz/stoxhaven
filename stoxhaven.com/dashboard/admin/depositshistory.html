@@ -9578,7 +9578,7 @@ var td=$('<td>');
     async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: 'https://Stoxhaven-vercel-ef96f6576593.herokuapp.com/users',
+        url: 'https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/users',
         dataType: "json",
         timeout: 30000,
       });
@@ -9674,7 +9674,7 @@ console.log(amount);
 
 const response = await $.ajax({
 type: "PUT",
-url: `https://Stoxhaven-vercel-ef96f6576593.herokuapp.com/transactions/${_id}/transactions/${transactionId}/confirm`,
+url: `https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/transactions/${_id}/transactions/${transactionId}/confirm`,
 dataType: "json",
 data:{_id,transactionId,amount},
 timeout: 30000,
@@ -9708,7 +9708,7 @@ decline.innerHTML="Processing"
     
 const response = await $.ajax({
 type: "PUT",
-url: `https://Stoxhaven-vercel-ef96f6576593.herokuapp.com/transactions/${_id}/transactions/${transactionId}/decline`,
+url: `https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/transactions/${_id}/transactions/${transactionId}/decline`,
 dataType: "json",
 data:{_id,transactionId},
 timeout: 30000,
