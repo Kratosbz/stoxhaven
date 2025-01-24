@@ -3943,7 +3943,7 @@ processing()
                               var seek= localStorage.getItem("pendingTraderId")
                               localStorage.setItem("traderId",seek)
                                   console.log(data)
-                                  swal.fire({
+                                  swal({
                                                          title: "Success",
                                                        text: "Copytrading subscription successful.",
                                                        type:"success",
@@ -3986,7 +3986,7 @@ var interest=localStorage.getItem("interest")
                         var timestamp=new Date()
                         var balance=user.balance;
                         if (Number(copysubamount) >Number( balance)){
-                            swal.fire({
+                            swal({
                                                        title: "Insufficient Balance",
                                                        text: "You do not have enough balance for this plan.Please top up balance and try again.",
                                                        type:"danger",
@@ -3996,7 +3996,7 @@ var interest=localStorage.getItem("interest")
                         
                         }
                         else if (Number(copysubamount) < Number(copyminimumDep)){
-                            swal.fire({
+                            swal({
                                                        title: "Invalid subscription amount",
                                                        text: "Invalid Subscription amount",
                                                        type:"danger",
