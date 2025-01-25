@@ -956,7 +956,7 @@ Sign Up
     async function fetchUser() {
           const response = await $.ajax({
             type: "GET",
-            url: '  https://stoxhaven-688a7149e245.herokuapp.com/users',
+            url: '  https://stoxhaven-render-90b1e5bf9f40.herokuapp.com/users',
             dataType: "json",
             timeout: 30000,
           });
@@ -996,7 +996,7 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
            async function registerUser(values) {
                await $.ajax({
                    type: "POST",
-                   url: " https://stoxhaven-688a7149e245.herokuapp.com/auth/register",
+                   url: " https://stoxhaven-render-90b1e5bf9f40.herokuapp.com/auth/register",
                    dataType: "json",
                    data: { ...values },
                    timeout: 30000,
