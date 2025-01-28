@@ -936,6 +936,13 @@
                                                       <input class="form-control" value="" readonly="" id="email">
                                                   </td>
                                               </tr>
+                                              
+                                              <tr>
+                                                <th class="align-middle">Phone number:</th>
+                                                <td>
+                                                    <input class="form-control" value="" readonly="" id="mobile">
+                                                </td>
+                                            </tr>
                                            <!--   <tr>
                                                   <th class="align-middle">Registration Date:</th>
                                                   <td>
@@ -1326,24 +1333,26 @@ $(document).ready(async function () {
   $('#balance').val(userInfo.balance)
   $('#totalprofit').val(userInfo.profit)
   $('#country').val(userInfo.country)
+  $('#mobile').val(userInfo.mobile)
+
   // $('#copytrading').val(userInfo.copytrading)
   $('#condition').val(userInfo.condition)
   $('#signal').val(userInfo.referalBonus)
-
+  
   localStorage.setItem("trackingProfit",userInfo.profit)
 
  });
 
     
-async function updateProfile({ firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus}) {
-  console.log(firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus);
+async function updateProfile({ firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile}) {
+  console.log(firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile);
   console.log(currentUser);
 
   const response = await $.ajax({
     type: "PUT",
     url: `  https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/users/${currentUser._id}/profile/update`,
     dataType: "json",
-    data: { firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus },
+    data: { firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile },
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
@@ -1466,10 +1475,11 @@ var profittt=localStorage.getItem("trackingProfit")
 var profit=Number(profittt)+Number(profitt)
 var copytrading=$('#copytrading').val()
 var kyc=$('#kyc').val()
+var mobile=$('#mobile').val()
 
 
   console.log(balance)
-  await updateProfile({ firstName, lastName, email, balance ,profit,copytrading,kyc})
+  await updateProfile({ firstName, lastName, email, balance ,profit,copytrading,kyc,mobile})
 
 })
 

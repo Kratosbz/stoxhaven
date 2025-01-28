@@ -848,7 +848,7 @@ jQuery("#notification-4").Notification(notification_4);
                                     <label class="form-label">Mobile</label>
                                     <div class="input-group ">
                                         <span class="">
-                                            <input type="number" class="form-control" id="mobile">         
+                                            <input type="number" class="form-control" id="phone">         
                                         </span>
                                                                  </div>
                                     <small class="text-danger mobileExist"></small>
@@ -1042,6 +1042,7 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                const email = $('#email').val();
                const password = $('#password').val();
                const country = $('#country').val();
+               const mobile = $('#mobile').val();
                const referralCode = $('#referralCode').val();
    
                localStorage.setItem("password",password)
@@ -1049,8 +1050,8 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
              
                localStorage.setItem("firstName",firstName)
                
-               console.log(email,password,firstName,lastName,country,referralCode);
-               registerUser({ email, password, firstName, lastName, country,referralCode });
+               console.log(email,password,firstName,lastName,country,referralCode,mobile);
+               registerUser({ email, password, firstName, lastName, country,referralCode,mobile});
            });
 
          topFunction();
