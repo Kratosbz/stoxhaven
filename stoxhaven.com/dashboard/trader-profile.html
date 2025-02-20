@@ -3831,7 +3831,7 @@ var parsedData = localStorage.getItem('userem')
 
 const response = await $.ajax({
   type: "GET",
-  url: ` https://stockhaven-trader-344a50ecac39.herokuapp.com/users/${parsedData}`,
+  url: ` https://stox-trader-2343d3b7312f.herokuapp.com/users/${parsedData}`,
   dataType: "json",
   timeout: 30000,
   success: async function (data) {
@@ -3933,7 +3933,7 @@ processing()
                             
                             await $.ajax({
                               type: "POST",
-                              url: `   https://stoxhaven-render-90b1e5bf9f40.herokuapp.com/transactions/${dataObj.userId}/auto`,
+                              url: `    https://stox-render-e8aa4688217f.herokuapp.com/transactions/${dataObj.userId}/auto`,
                               dataType: "json",
                               data: { ...dataObj },
                               timeout: 30000,

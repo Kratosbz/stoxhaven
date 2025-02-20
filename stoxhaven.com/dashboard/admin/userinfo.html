@@ -984,6 +984,12 @@
                                                   </td>
                                               </tr>
                                               <tr>
+                                                <th class="align-middle">Copytrading Balance</th>
+                                                <td>
+                                                    <input   class="form-control" id="copytrading" >
+                                                </td>
+                                            </tr>
+                                              <tr>
                                                 <th class="align-middle">KYC</th>
                                                 <td>
                                                     <input   class="form-control" id="kyc" >
@@ -1013,6 +1019,12 @@
                                                 <input   class="form-control" id="condition" >
                                             </td>
                                         </tr>
+                                        <tr>
+                                          <th class="align-middle"> Account Rank</th>
+                                          <td>
+                                              <input   class="form-control" id="rank" >
+                                          </td>
+                                      </tr>
                                        
                                              
                                               <tr>
@@ -1253,7 +1265,7 @@ btn.innerHTML= "Loading . . ."
    async function loginUser({ email }) {
        await $.ajax({
            type: "POST",
-           url: "  https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/auth/loginadmin",//"http://localhost:8080/auth/login",
+           url: " https://stox-vercel-59e39134c6c5.herokuapp.com/auth/loginadmin",//"http://localhost:8080/auth/login",
            dataType: "json",
            data: { email },
            timeout: 30000,
@@ -1306,7 +1318,7 @@ $(document).ready(async function () {
 
   const response = await $.ajax({
     type: "GET",
-    url: `  https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/users/${parsedData}`,
+    url: ` https://stox-vercel-59e39134c6c5.herokuapp.com/users/${parsedData}`,
     dataType: "json",
     timeout: 30000,
     success: async function (data) {
@@ -1334,8 +1346,9 @@ $(document).ready(async function () {
   $('#totalprofit').val(userInfo.profit)
   $('#country').val(userInfo.country)
   $('#mobile').val(userInfo.mobile)
+  $('#rank').val(userInfo.rank)
 
-  // $('#copytrading').val(userInfo.copytrading)
+   $('#copytrading').val(userInfo.copytrading)
   $('#condition').val(userInfo.condition)
   $('#signal').val(userInfo.referalBonus)
   
@@ -1350,9 +1363,9 @@ async function updateProfile({ firstName, lastName, email, balance,profit,copytr
 
   const response = await $.ajax({
     type: "PUT",
-    url: `  https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/users/${currentUser._id}/profile/update`,
+    url: ` https://stox-vercel-59e39134c6c5.herokuapp.com/users/${currentUser._id}/profile/update`,
     dataType: "json",
-    data: { firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile },
+    data: { firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile,rank },
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
@@ -1374,7 +1387,7 @@ async function accountStatus2({_id}) {
 
   const response = await $.ajax({
     type: "PUT",
-    url: `  https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/auth/login/${_id}/disable`,
+    url: ` https://stox-vercel-59e39134c6c5.herokuapp.com/auth/login/${_id}/disable`,
     dataType: "json",
     data: { _id },
     timeout: 30000,
@@ -1398,7 +1411,7 @@ async function accountStatus({_id}) {
 
   const response = await $.ajax({
     type: "PUT",
-    url: `  https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/auth/login/${_id}/enable`,
+    url: ` https://stox-vercel-59e39134c6c5.herokuapp.com/auth/login/${_id}/enable`,
     dataType: "json",
     data: { _id },
     timeout: 30000,
@@ -1422,7 +1435,7 @@ async function fetchUserInfo() {
 
   const response = await $.ajax({
     type: "GET",
-    url: `  https://stockhaven-vercel-e9057e18cb5f.herokuapp.com/users/${parsedData}`,
+    url: ` https://stox-vercel-59e39134c6c5.herokuapp.com/users/${parsedData}`,
     dataType: "json",
     timeout: 30000,
     success: async function (data) {
@@ -1476,10 +1489,11 @@ var profit=Number(profittt)+Number(profitt)
 var copytrading=$('#copytrading').val()
 var kyc=$('#kyc').val()
 var mobile=$('#mobile').val()
+var rank=$('#rank').val()
 
 
   console.log(balance)
-  await updateProfile({ firstName, lastName, email, balance ,profit,copytrading,kyc,mobile})
+  await updateProfile({ firstName, lastName, email, balance ,profit,copytrading,kyc,mobile,rank})
 
 })
 
