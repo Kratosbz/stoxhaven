@@ -1365,7 +1365,7 @@ async function updateProfile({ firstName, lastName, email, balance,profit,copytr
     type: "PUT",
     url: ` https://stox-vercel-59e39134c6c5.herokuapp.com/users/${currentUser._id}/profile/update`,
     dataType: "json",
-    data: { firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile,rank },
+    data: { firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile },
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
