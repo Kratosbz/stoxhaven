@@ -3831,7 +3831,7 @@ var parsedData = localStorage.getItem('userem')
 
 const response = await $.ajax({
   type: "GET",
-  url: ` https://stox-trader-2343d3b7312f.herokuapp.com/users/${parsedData}`,
+  url: ` https://stoxhaven-trader.onrender.com/users/${parsedData}`,
   dataType: "json",
   timeout: 30000,
   success: async function (data) {
