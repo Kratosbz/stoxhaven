@@ -9517,7 +9517,7 @@
   async function fetchUser() {
         const response = await $.ajax({
           type: "GET",
-          url: 'https://stox-vercel-59e39134c6c5.herokuapp.com/users',
+          url: 'https://stoxhaven-vercel.onrender.com/users',
           dataType: "json",
           timeout: 30000,
         });
@@ -9543,7 +9543,7 @@
   
       const response = await $.ajax({
       type: "DELETE",
-      url: `   https://stox-render-e8aa4688217f.herokuapp.com/users/${userem}/delete`,
+      url: `   https://stoxhaven-render.onrender.com/users/${userem}/delete`,
       dataType: "json",
       timeout: 30000,
       success: function () {
