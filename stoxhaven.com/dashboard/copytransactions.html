@@ -2,8 +2,8 @@
 <!-- saved from url=(0037)traders.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      
-   <title> Stoxhaven - Copy-trading</title>
-    <meta name="title" content="Stoxhaven - Copy-trading">
+   <title> stoxhaven - Copy-trading</title>
+    <meta name="title" content="stoxhaven - Copy-trading">
 
     <meta name="description" content="Follow Lead Traders and copy their trading activity with Expert CopyTrading">
     <meta name="keywords" content="investment">
@@ -13,15 +13,15 @@
     <link rel="apple-touch-icon" href="./copytransactions_files/logo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Stoxhaven - Copy-trading">
+    <meta name="apple-mobile-web-app-title" content="stoxhaven - Copy-trading">
     
-    <meta itemprop="name" content="Stoxhaven - Copy-trading">
+    <meta itemprop="name" content="stoxhaven - Copy-trading">
     <meta itemprop="description" content="Follow Lead Traders and copy their trading activity with Expert CopyTrading">
     <meta itemprop="image" content="http://stoxhaven.com/assets/images/seo/66c502698a1731724187241.jpeg">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Stoxhaven">
-    <meta property="og:description" content="Stoxhaven - When experts trade, you earn">
+    <meta property="og:title" content="stoxhaven">
+    <meta property="og:description" content="stoxhaven - When experts trade, you earn">
     <meta property="og:image" content="http://stoxhaven.com/assets/images/seo/66c502698a1731724187241.jpeg">
     <meta property="og:image:type" content="jpeg">
     <meta property="og:image:width" content="1180">
@@ -2246,7 +2246,7 @@ body.dark .alert-warning {
 
           <a class="sidebar__item active " href="./copytransactions.html">
             <div class="side_icon"><i class="fas fa-sync-alt"  style="color: white;"></i></div>
-            <div class="sidebar__text">Copy Trading</div>
+            <div class="sidebar__text">Trading History</div>
           </a>
           <a class="sidebar__item " href="./livetrade.html">
             <div class="side_icon"><i class="fas fa-chart-line"  style="color: white;"></i></div>
@@ -2257,7 +2257,7 @@ body.dark .alert-warning {
             <div class="side_icon"><i class="fas fa-history" style="color: white;"></i></div>
             <div class="sidebar__text">Deposits</div>
           </a>
-          <a class="sidebar__item  " href="withdrawalHistory.html">
+          <a class="sidebar__item  " href="withdrawalhistory.html">
             <div class="side_icon"><i class="fas fa-arrow-circle-down"  style="color: white;"></i></div>
             <div class="sidebar__text">Withdrawals</div>
           </a>
@@ -2376,7 +2376,7 @@ body.dark .alert-warning {
               <div class="popup__row">
                 <div class="popup__field">
                   <div class="popup__label">Address<span style="color: red;">*</span></div>
-                  <div class="popup__wrap"><input class="popup__input" type="text" ></div>
+                  <div class="popup__wrap"><input class="popup__input" type="text" name="address" value="500 Marion Drive" required="" id="address"></div>
                 </div>
                 <div class="popup__field">
                   <div class="popup__label">State<span style="color: red;">*</span></div>
@@ -2514,7 +2514,7 @@ body.dark .alert-warning {
 <!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
 var _smartsupp = _smartsupp || {};
-_smartsupp.key = '7984576f51d5210bb127a5ade9bd6fd72cce1daa';
+_smartsupp.key = '6e1ba1ed89e659a390891d83dd113b1c84d2e031';
 window.smartsupp||(function(d) {
   var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
   s=d.getElementsByTagName('script')[0];c=d.createElement('script');
@@ -2523,6 +2523,8 @@ window.smartsupp||(function(d) {
 })(document);
 </script>
 <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
 
             </div>
             <div class="popup__parameters">
@@ -3242,9 +3244,61 @@ window.smartsupp||(function(d) {
               </div>
 
             </div>
-              <div class="activity__stage h6 mobile-hide">History</div>
+
+            <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .form-container input, .form-container select, .form-container button, .form-container label {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .form-container input[type="range"] {
+      width: 100%;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .slider-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    /* Initially hide the slider and balance fields */
+    #tradeAmountSection, #accountBalanceSection {
+      display: none;
+    }
+
+    @media screen and (max-width: 750px) {
+	#widgy {
+		display: flex;
+    flex-direction: column;
+	}
+}
+
+  </style>
+  <div style="display: flex;" id="widgy"> 
+    
+    <div>
+      
+      
+      </div>
+      
+              <div class="activity__stage h6 mobile-hide"  >History</div>
             
             
+
             
             <!-- New Code Line --->
     <div class="exchange__top">
@@ -3283,13 +3337,13 @@ window.smartsupp||(function(d) {
 
  
 
-<div class="accordion-body text-center">
+<div class="accordion-body text-center" style="overflow: scroll;">
                 
-            </div><table id="customers">
+            </div><table id="customers" style="overflow: scroll;">
   <tbody class="table-body">
     <tr>
     <th>Currency</th>
-    <th>Type</th>
+   
     <th>Amount</th>
     <th>Profit</th>
     <th>Trader</th>
@@ -3333,15 +3387,7 @@ window.smartsupp||(function(d) {
     
     
                 <!-- cookies dark version start -->
-        <div class="cookies-card text-center">
-            <div class="cookies-card__icon bg--base">
-                <i class="fas fa-cookie-bite"></i>
-            </div>
-            <p class="mt-4 cookies-card__content">We may use cookies or any other tracking technologies when you visit our website, including any other media form, mobile website, or mobile application related or connected to help customize the Site and improve your experience. <a href="http://stoxhaven.com/cookie-policy" class="text-primary" target="_blank">learn more</a></p>
-            <div class="cookies-card__btn mt-4">
-                <a href="javascript:void(0)" class="btn btn--base text-white w-100 policy">Allow</a>
-            </div>
-        </div>
+        
         <!-- cookies dark version end -->
     
     <script src="./copytransactions_files/jquery-3.6.0.min.js.download"></script>
@@ -3362,52 +3408,50 @@ window.smartsupp||(function(d) {
 
 <script src="./copytransactions_files/iziToast.min.js.download"></script>
 
-
 <script>
+    async function fetchUserInfo() {
+  // Retrieve trader data from local storage
+  const userFromLs=localStorage.getItem("user") // Assuming trader data contains _id field
+const parseUser=JSON.parse(userFromLs)
+const userId=parseUser.email
+  try {
+    // Wait for the response from the server
+    const response = await $.ajax({
+      type: "GET",
+      url: `https://copyx-render.onrender.com/users/${userId}`,
+      dataType: "json",
+      timeout: 30000,
+    });
+
+    // Log the fetched data (optional)
+    console.log("data", response);
+localStorage.setItem("user",JSON.stringify(response.data))
+    // Assign the response data to currentUser object (make sure currentUser is defined)
+    Object.assign(currentUser, response.data);
+
+    // Return the user data
+    return response.data;
+
+  } catch (error) {
+    // Handle any errors that occurred during the request
+    console.error("Error fetching user data:", error);
+    alert("An error occurred while fetching user data.");
+  }
+}
+
+
+
+    
 
 var currentUser = {};
 
 
 $(document).ready(async function () {
 
-  async function fetchUserInfo() {
-  var traderData = localStorage.getItem('trader')
-  var parsedData =JSON.parse(traderData)
-  var traderIdent=parsedData._id;
-//   var traderData = localStorage.getItem('user')
-//   var parsedData =JSON.parse(traderData)
-//   var traderIdent=parsedData.trader;
-
-
-  const response = await $.ajax({
-    type: "GET",
-    url: ` https://stoxhaven-trader.onrender.com/users/${traderIdent}`,
-    dataType: "json",
-    timeout: 30000,
-    success: async function (data) {
-      console.log("data", data);
-      Object.assign(currentUser, data.data)
-    },
-    error: function () {
-      alert(error)
-    }
-   
-  });
-
-  return response.data;
-}
-
-$('.btn').click(function(){
-  var btn=$('.btn')
-  btn.text('...')
-})
-
-
 
   const userInfo = await fetchUserInfo();
   const userInfoString=JSON.stringify(userInfo)
-const user=localStorage.setItem("trader",userInfoString)
-
+const user=localStorage.setItem("user",userInfoString)
 
 $('#id').text(userInfo._id)
 $('#drawdown').text(userInfo.drawdown)
@@ -3423,20 +3467,23 @@ let totalCopytrade=0;
 
 var tbl = $('.table-body');
 var td=$('<td>');
-     userInfo.history.forEach(function (user) {
      
-        if(user.type=="LONG"){
+  var trader=localStorage.getItem("traderName")
+  
+      userInfo.planHistory.forEach(function (user) {
+     
+     
 gains+=Number(user.profit)
-   
-        }
 
-        totalCopytrade+=Number(user.amount)
+     
 
-        $("#gains").text(gains)
-        $("#totalCopytrade").text(totalCopytrade)
-       
-        var row = $('<tr>').appendTo(tbl);
-        // Assuming 'row' is already defined and refers to the table row
+     totalCopytrade+=Number(user.entryPrice)
+
+     $("#gains").text(gains)
+     $("#totalCopytrade").text(totalCopytrade)
+    
+     var row = $('<tr>').appendTo(tbl);
+     // Assuming 'row' is already defined and refers to the table row
 
 // Currency
 // Apply "Poppins" font from Google Fonts to the entire row
@@ -3446,55 +3493,54 @@ row.css('font-family', 'Poppins, sans-serif');
 $('<td>').text(`${user.currency}`).appendTo(row);
 
 // Trade Type (e.g., Buy or Sell) with color distinction
-$('<td>')
-  .text(`${user.type}`)
-  .css('color', user.type === 'LONG' ? 'green' : 'red') // Green for 'Buy', Red for 'Sell'
-  .appendTo(row);
+// $('<td>')
+// .text(`${user.typr}`)
+// .css('color', user.typr === 'LONG' ? 'green' : 'red') // Green for 'Buy', Red for 'Sell'
+// .appendTo(row);
 
 // Amount
 $('<td>')
-  .text(`$${user.amount}`)
-  .css('font-weight', 'bold')  // Make the amount bold
-  .appendTo(row);
+.text(`$${user.entryPrice}`)
+.css('font-weight', 'bold')  // Make the amount bold
+.appendTo(row);
 
 // Profit/Loss with color styling
 $('<td>')
-  .text(`$${user.profit}`)
-  .css('color', user.profit >= 0 ? 'green' : 'red') // Green for profit, Red for loss
-  .css('font-weight', user.profit >= 0 ? 'bold' : 'normal')  // Bold if profit
-  .appendTo(row);
+.text(`$${user.profit}`)
+.css('color', user.profit >= 0 ? 'green' : 'red') // Green for profit, Red for loss
+.css('font-weight', user.profit >= 0 ? 'bold' : 'normal')  // Bold if profit
+.appendTo(row);
 
 // User Info Name
 $('<td>')
-  .text(`${userInfo.name}`)
-  .css('color', '#007bff')  // Blue color for the name
-  .appendTo(row);
+.text(`${trader}`)
+.css('color', '#007bff')  // Blue color for the name
+.appendTo(row);
 
 // Status with background color
 $('<td>')
-  .text(`${user.status}`)
-  .css('color', user.status === 'COMPLETED' ? 'lightgreen' : 'lightgray') // Green for 'Active', Gray for others
-  .css('font-weight', 'bold')  // Make status bold
-  .appendTo(row);
+.text(`${user.status}`)
+.css('color', user.status === 'COMPLETED' ? 'lightgreen' : 'lightgray') // Green for 'Active', Gray for others
+.css('font-weight', 'bold')  // Make status bold
+.appendTo(row);
 
 // Date
 $('<td>')
-  .text(`${user.date}`)
-  .css('font-style', 'italic')  // Make the date italic
-  .appendTo(row);
-       
-       
-              
-       
-              
-       
-        tbl.appendTo($(".table"));
+.text(`${user.date}`)
+.css('font-style', 'italic')  // Make the date italic
+.appendTo(row);
+    
+    
+           
+    
+           
+    
+     tbl.appendTo($(".table"));
 
-       
-      
+    
+   
 
-      })
-
+   })
 
 
  });
@@ -3796,40 +3842,7 @@ $('<td>')
   
 
 
-<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
-
-    
-<div class="gtranslate_wrapper"></div>
-   <script>
-	   document.addEventListener('DOMContentLoaded', function() {
-		   try {
-			   window.gtranslateSettings = {
-				   "default_language": "en",
-				   "native_language_names": true,
-				   "detect_browser_language": true,
-				   "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
-				   "wrapper_selector": ".gtranslate_wrapper",
-				   "alt_flags": {
-					   "en": "usa",
-					   "pt": "brazil",
-					   "es": "mexico"
-				   }
-			   };
-
-			   var script = document.createElement('script');
-			   script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
-			   script.async = true;
-			   script.onerror = function() {
-				   console.error('Error loading the GTranslate script.');
-			   };
-			   document.head.appendChild(script);
-		   } catch (error) {
-			   console.error('Error setting up GTranslate:', error);
-		   }
-	   });
-   </script>
-
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
       div.grammarly-desktop-integration {
         position: absolute;
         width: 1px;

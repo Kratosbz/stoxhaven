@@ -2,8 +2,8 @@
 <!-- saved from url=(0048)http://stoxhaven.com/user/transactions?trx_type=- -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      
-   <title> Stoxhaven - Transactions</title>
-    <meta name="title" content="Stoxhaven - Transactions">
+   <title> stoxhaven - Transactions</title>
+    <meta name="title" content="stoxhaven - Transactions">
 
     <meta name="description" content="Follow Lead Traders and copy their trading activity with Expert CopyTrading">
     <meta name="keywords" content="investment">
@@ -13,15 +13,15 @@
     <link rel="apple-touch-icon" href="./depositshistory_files/logo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Stoxhaven - Transactions">
+    <meta name="apple-mobile-web-app-title" content="stoxhaven - Transactions">
     
-    <meta itemprop="name" content="Stoxhaven - Transactions">
+    <meta itemprop="name" content="stoxhaven - Transactions">
     <meta itemprop="description" content="Follow Lead Traders and copy their trading activity with Expert CopyTrading">
     <meta itemprop="image" content="http://stoxhaven.com/assets/images/seo/66c502698a1731724187241.jpeg">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Stoxhaven">
-    <meta property="og:description" content="Stoxhaven - When experts trade, you earn">
+    <meta property="og:title" content="stoxhaven">
+    <meta property="og:description" content="stoxhaven - When experts trade, you earn">
     <meta property="og:image" content="http://stoxhaven.com/assets/images/seo/66c502698a1731724187241.jpeg">
     <meta property="og:image:type" content="jpeg">
     <meta property="og:image:width" content="1180">
@@ -2236,7 +2236,7 @@ body.dark .alert-warning {
               
               <a class="sidebar__item " href="copytransactions.html">
               <div class="sidebar__icon"><svg class="icon icon-chart"><use xlink:href="http://stoxhaven.com/dashcss/assets/newBack/img/sprite.svg#icon-chart"></use></svg></div>
-              <div class="sidebar__text">Copy Trading</div>
+              <div class="sidebar__text">Trading History</div>
               </a>
             
             <a class="sidebar__item " href="livetrade.html">
@@ -2249,7 +2249,7 @@ body.dark .alert-warning {
               </svg></div>
             <div class="sidebar__text">Deposits</div>
           </a>
-          <a class="sidebar__item " href="withdrawalHistory.html">
+          <a class="sidebar__item " href="withdrawalhistory.html">
             <div class="sidebar__icon"><svg class="icon icon-chart">
                 <use xlink:href="http://stoxhaven.com/dashcss/assets/newBack/img/sprite.svg#icon-chart"></use>
               </svg></div>
@@ -2374,7 +2374,7 @@ body.dark .alert-warning {
               <div class="popup__row">
                 <div class="popup__field">
                   <div class="popup__label">Address<span style="color: red;">*</span></div>
-                  <div class="popup__wrap"><input class="popup__input" type="text" ></div>
+                  <div class="popup__wrap"><input class="popup__input" type="text" name="address" value="500 Marion Drive" required="" id="address"></div>
                 </div>
                 <div class="popup__field">
                   <div class="popup__label">State<span style="color: red;">*</span></div>
@@ -2512,7 +2512,7 @@ body.dark .alert-warning {
 <!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
 var _smartsupp = _smartsupp || {};
-_smartsupp.key = '7984576f51d5210bb127a5ade9bd6fd72cce1daa';
+_smartsupp.key = '6e1ba1ed89e659a390891d83dd113b1c84d2e031';
 window.smartsupp||(function(d) {
   var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
   s=d.getElementsByTagName('script')[0];c=d.createElement('script');
@@ -2521,6 +2521,8 @@ window.smartsupp||(function(d) {
 })(document);
 </script>
 <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
 
             </div>
             <div class="popup__parameters">
@@ -3325,7 +3327,7 @@ window.smartsupp||(function(d) {
 
         const response = await $.ajax({
           type: "GET",
-          url: ` https://stoxhaven-vercel.onrender.com/users/${userFromLS.email}`,
+          url: `  https://stoxhaven-render.onrender.com/users/${userFromLS.email}`,
           dataType: "json",
           timeout: 30000,
           success: async function (data) {
@@ -3357,7 +3359,7 @@ window.smartsupp||(function(d) {
 					 
 					  var tbl = $('.table-body');
 				  
-					  transactions.planHistory.forEach(function (transaction) {
+					  transactions.plan.forEach(function (transaction) {
               const date = new Date(transaction.timestamp);
 const formattedDate = date.toLocaleString("en-GB", {
   timeZone: "UTC",
@@ -3371,7 +3373,7 @@ const formattedDate = date.toLocaleString("en-GB", {
   hour12: false
 });
 						var row = $('<tr>').appendTo(tbl);
-              $('<td>').text(`${transaction.subname.slice(12)}`).appendTo(row);
+              $('<td>').text(`${transaction.subname}`).appendTo(row);
 						 $('<td>').text(`${transaction.info}`).appendTo(row);
 						
 							$('<td>').text(`$${transaction.subamount}`).appendTo(row);
@@ -3391,40 +3393,7 @@ const formattedDate = date.toLocaleString("en-GB", {
 
 
 
-</div><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
-
-    
-<div class="gtranslate_wrapper"></div>
-   <script>
-	   document.addEventListener('DOMContentLoaded', function() {
-		   try {
-			   window.gtranslateSettings = {
-				   "default_language": "en",
-				   "native_language_names": true,
-				   "detect_browser_language": true,
-				   "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
-				   "wrapper_selector": ".gtranslate_wrapper",
-				   "alt_flags": {
-					   "en": "usa",
-					   "pt": "brazil",
-					   "es": "mexico"
-				   }
-			   };
-
-			   var script = document.createElement('script');
-			   script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
-			   script.async = true;
-			   script.onerror = function() {
-				   console.error('Error loading the GTranslate script.');
-			   };
-			   document.head.appendChild(script);
-		   } catch (error) {
-			   console.error('Error setting up GTranslate:', error);
-		   }
-	   });
-   </script>
-
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+</div><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
       div.grammarly-desktop-integration {
         position: absolute;
         width: 1px;

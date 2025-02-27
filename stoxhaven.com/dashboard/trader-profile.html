@@ -9,8 +9,8 @@
 
 
    
- <title> Stoxhaven - Trader Detail - Options buffet</title>
-  <meta name="title" content="Stoxhaven - Trader Detail - Options buffet">
+ <title> stoxhaven - Trader Detail - Options buffet</title>
+  <meta name="title" content="stoxhaven - Trader Detail - Options buffet">
 
   <meta name="description" content="Follow Lead Traders and copy their trading activity with Expert CopyTrading">
   <meta name="keywords" content="investment">
@@ -20,15 +20,15 @@
   <link rel="apple-touch-icon" href="./trader-profile_files/logo.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Stoxhaven - Trader Detail - Options buffet">
+  <meta name="apple-mobile-web-app-title" content="stoxhaven - Trader Detail - Options buffet">
   
-  <meta itemprop="name" content="Stoxhaven - Trader Detail - Options buffet">
+  <meta itemprop="name" content="stoxhaven - Trader Detail - Options buffet">
   <meta itemprop="description" content="Follow Lead Traders and copy their trading activity with Expert CopyTrading">
   <meta itemprop="image" content="http://stoxhaven.com/assets/images/seo/66c502698a1731724187241.jpeg">
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Stoxhaven">
-  <meta property="og:description" content="Stoxhaven - When experts trade, you earn">
+  <meta property="og:title" content="stoxhaven">
+  <meta property="og:description" content="stoxhaven - When experts trade, you earn">
   <meta property="og:image" content="http://stoxhaven.com/assets/images/seo/66c502698a1731724187241.jpeg">
   <meta property="og:image:type" content="jpeg">
   <meta property="og:image:width" content="1180">
@@ -2243,7 +2243,7 @@ body.dark .alert-warning {
             
             <a class="sidebar__item " href="traders.html">
             <div class="sidebar__icon"><svg class="icon icon-chart"><use xlink:href="http://stoxhaven.com/dashcss/assets/newBack/img/sprite.svg#icon-chart"></use></svg></div>
-            <div class="sidebar__text">Copy Trading</div>
+            <div class="sidebar__text">Trading History</div>
             </a>
           
           <a class="sidebar__item " href="livetrade.html">
@@ -2385,7 +2385,7 @@ body.dark .alert-warning {
             <div class="popup__row">
               <div class="popup__field">
                 <div class="popup__label">Address<span style="color: red;">*</span></div>
-                <div class="popup__wrap"><input class="popup__input" type="text" ></div>
+                <div class="popup__wrap"><input class="popup__input" type="text" name="address" value="500 Marion Drive" required="" id="address"></div>
               </div>
               <div class="popup__field">
                 <div class="popup__label">State<span style="color: red;">*</span></div>
@@ -2995,7 +2995,7 @@ body.dark .alert-warning {
                      
                   </div>
                 </div>
-               
+
                 
               </div>
               <div class="wallets__item mt-4">
@@ -3839,7 +3839,7 @@ var parsedData = localStorage.getItem('userem')
 
 const response = await $.ajax({
   type: "GET",
-  url: ` https://stoxhaven-trader.onrender.com/users/${parsedData}`,
+  url: `https://whaleoptions-trader.onrender.com/users/${parsedData}`,
   dataType: "json",
   timeout: 30000,
   success: async function (data) {
@@ -3942,7 +3942,7 @@ processing()
                             
                             await $.ajax({
                               type: "POST",
-                              url: `    https://stoxhaven-render.onrender.com/transactions/${dataObj.userId}/auto`,
+                              url: `  https://stoxhaven-render.onrender.com/transactions/${dataObj.userId}/auto`,
                               dataType: "json",
                               data: { ...dataObj },
                               timeout: 30000,
@@ -3995,7 +3995,7 @@ var interest=localStorage.getItem("interest")
                         var timestamp=new Date()
                         var balance=user.balance;
                         if (Number(copysubamount) >Number( balance)){
-                            swal({
+                            swal.fire({
                                                        title: "Insufficient Balance",
                                                        text: "You do not have enough balance for this plan.Please top up balance and try again.",
                                                        type:"danger",
@@ -4005,7 +4005,7 @@ var interest=localStorage.getItem("interest")
                         
                         }
                         else if (Number(copysubamount) < Number(copyminimumDep)){
-                            swal({
+                            swal.fire({
                                                        title: "Invalid subscription amount",
                                                        text: "Invalid Subscription amount",
                                                        type:"danger",
@@ -4145,40 +4145,7 @@ var interest=localStorage.getItem("interest")
 
 
 
-<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
-
-    
-<div class="gtranslate_wrapper"></div>
-   <script>
-	   document.addEventListener('DOMContentLoaded', function() {
-		   try {
-			   window.gtranslateSettings = {
-				   "default_language": "en",
-				   "native_language_names": true,
-				   "detect_browser_language": true,
-				   "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
-				   "wrapper_selector": ".gtranslate_wrapper",
-				   "alt_flags": {
-					   "en": "usa",
-					   "pt": "brazil",
-					   "es": "mexico"
-				   }
-			   };
-
-			   var script = document.createElement('script');
-			   script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
-			   script.async = true;
-			   script.onerror = function() {
-				   console.error('Error loading the GTranslate script.');
-			   };
-			   document.head.appendChild(script);
-		   } catch (error) {
-			   console.error('Error setting up GTranslate:', error);
-		   }
-	   });
-   </script>
-
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
     div.grammarly-desktop-integration {
       position: absolute;
       width: 1px;
