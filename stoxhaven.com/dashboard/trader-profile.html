@@ -2995,9 +2995,17 @@ body.dark .alert-warning {
                      
                   </div>
                 </div>
-
+               
                 
               </div>
+              <div class="wallets__item mt-4">
+                  <div class="wallets__icon"><img src="./trader-profile_files/circle-blue.svg" alt=""></div>
+                  <div class="wallets__details">
+                    <div class="wallets__info">Bio</div>
+                    <div class="wallets__number h6" id="bio"></div>
+                     
+                  </div>
+                </div>
               <div style="display: flex;align-items: center;justify-content: center;margin-top: 20px">              <button class="trigger-btn" id="openModal">Connect</button>
 
               </div>
@@ -3861,6 +3869,7 @@ $('#photo').attr('src',userInfo.photo)
 $("#minLimit").text(userInfo.minLimit)
 $("#maxLimit").text(userInfo.maxLimit)
 $("#interest").text(userInfo.interest+"%")
+$("#bio").text(userInfo.bio)
 
 localStorage.setItem("interest",userInfo.interest)
 

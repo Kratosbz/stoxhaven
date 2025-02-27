@@ -946,7 +946,7 @@
                                                 <tr>
                                                   <th class="align-middle"> Followers:</th>
                                                   <td>
-                                                      <input class="form-control" value=""  id="signal">
+                                                      <input class="form-control" value=""  id="followers">
                                                   </td>
                                               </tr>
                                              <!--   <tr>
@@ -1013,6 +1013,13 @@
                                                     <input class="form-control bg-dark text-light" type="file"   value="" id="image-upload" >
                                                   </td>
                                               </tr>
+
+                                              <tr>
+                                                <th class="align-middle">Bio</th>
+                                                <td>
+                                                  <input class="form-control bg-dark text-light" type="file"   value="" id="bio" >
+                                                </td>
+                                            </tr>
                                             
                                                
                                                 <tr>
@@ -1391,20 +1398,21 @@ const cloudName = 'dsyjlantq';
    var photo=localStorage.getItem("imgUrl");
    var id=$('#id').val()
    var profit=$('#profit').val()
-   var signal=$('#signal').val()
+   var signal=$('#followers').val()
    var minLimit=$('#minLimit').val()
    var maxLimit=$('#maxLimit').val()
    var interest=$('#interest').val()
-   
+   var bio=$('#bio').val()
+  
         
          registerUser({ photo,name,drawdown,frequency,id,
 strategy,
-risk,profit,signal,minLimit,maxLimit,interest
+risk,profit,signal,minLimit,maxLimit,interest,bio
 })
 
 console.log(  name,drawdown,frequency,id,
 strategy,
-risk,profit,photo,signal,minLimit,maxLimit,interest)
+risk,profit,photo,signal,minLimit,maxLimit,interest,bio)
 
 },5000);
 

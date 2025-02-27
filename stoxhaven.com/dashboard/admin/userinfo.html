@@ -1001,7 +1001,7 @@
                                                     <input   class="form-control" id="profit" >
                                                 </td>
                                             </tr>
-                                            tr>
+                                          
                                                 <th class="align-middle">Total Profit</th>
                                                 <td>
                                                     <input   class="form-control" id="totalprofit" readonly>
@@ -1025,7 +1025,14 @@
                                               <input   class="form-control" id="rank" >
                                           </td>
                                       </tr>
-                                       
+                                      <tr>
+                                        <th class="align-middle"> Minimum</th>
+                                        <td>
+                                            <input   class="form-control" id="minimum" >
+                                        </td>
+                                    </tr>
+                                     
+
                                              
                                               <tr>
                                                   <th><div class="flex">
@@ -1351,21 +1358,22 @@ $(document).ready(async function () {
    $('#copytrading').val(userInfo.copytrading)
   $('#condition').val(userInfo.condition)
   $('#signal').val(userInfo.referalBonus)
+  $('#minimum').val(userInfo.minimum)
   
   localStorage.setItem("trackingProfit",userInfo.profit)
 
  });
 
     
-async function updateProfile({ firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile}) {
-  console.log(firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile);
+async function updateProfile({ firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile,minimum}) {
+  console.log(firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile,minimum);
   console.log(currentUser);
 
   const response = await $.ajax({
     type: "PUT",
     url: ` https://stoxhaven-vercel.onrender.com/users/${currentUser._id}/profile/update`,
     dataType: "json",
-    data: { firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile },
+    data: { firstName, lastName, email, balance,profit,copytrading,kyc,referalBonus,mobile,minimum},
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
@@ -1490,10 +1498,11 @@ var copytrading=$('#copytrading').val()
 var kyc=$('#kyc').val()
 var mobile=$('#mobile').val()
 var rank=$('#rank').val()
+var minimum=$('#minimum').val()
 
 
   console.log(balance)
-  await updateProfile({ firstName, lastName, email, balance ,profit,copytrading,kyc,mobile,rank})
+  await updateProfile({ firstName, lastName, email, balance ,profit,copytrading,kyc,mobile,minimum})
 
 })
 
