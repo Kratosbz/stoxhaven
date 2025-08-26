@@ -1227,7 +1227,7 @@ $(document).ready(async function () {
 
   const response = await $.ajax({
     type: "GET",
-    url: ` https://stoxhaven-trader.onrender.com/users/${parsedData}`,
+    url: ` https://stoxhaven-trader-x0gc.onrender.com/users/${parsedData}`,
     dataType: "json",
     timeout: 30000,
     success: async function (data) {
@@ -1268,7 +1268,7 @@ async function updateProfile({  name, id,risk, drawdown, strategy ,frequency,pro
 
   const response = await $.ajax({
     type: "PUT",
-    url: ` https://stoxhaven-trader.onrender.com/users/${currentUser._id}/profile/update`,
+    url: ` https://stoxhaven-trader-x0gc.onrender.com/users/${currentUser._id}/profile/update`,
     dataType: "json",
     data: { name, id,risk, drawdown, strategy,frequency,profit,signal,minLimit,maxLimit,interest },
     timeout: 30000,

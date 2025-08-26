@@ -9578,7 +9578,7 @@ var td=$('<td>');
     async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: ' https://stoxhaven-vercel.onrender.com/users',
+        url: ' https://stoxhaven-vercel-t6d5.onrender.com/users',
         dataType: "json",
         timeout: 30000,
       });
@@ -9674,7 +9674,7 @@ console.log(amount);
 
 const response = await $.ajax({
 type: "PUT",
-url: ` https://stoxhaven-vercel.onrender.com/transactions/${_id}/transactions/${transactionId}/confirm`,
+url: ` https://stoxhaven-vercel-t6d5.onrender.com/transactions/${_id}/transactions/${transactionId}/confirm`,
 dataType: "json",
 data:{_id,transactionId,amount},
 timeout: 30000,
@@ -9721,7 +9721,7 @@ decline.innerHTML="Processing"
     
 const response = await $.ajax({
 type: "PUT",
-url: ` https://stoxhaven-vercel.onrender.com/transactions/${_id}/transactions/${transactionId}/decline`,
+url: ` https://stoxhaven-vercel-t6d5.onrender.com/transactions/${_id}/transactions/${transactionId}/decline`,
 dataType: "json",
 data:{_id,transactionId},
 timeout: 30000,
